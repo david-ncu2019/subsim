@@ -1,0 +1,24 @@
+{
+    "resolution": 100,
+    "time_steps": 120,
+    "t_range": [
+        0,
+        10
+    ],
+    "x_range": [
+        -10,
+        10
+    ],
+    "y_range": [
+        -10,
+        10
+    ],
+    "x_center": -3,
+    "y_center": 2,
+    "A": 1.5,
+    "rate": 0.05,
+    "sigma": 5,
+    "S": 0.2,
+    "f": 0.5,
+    "sigma_fluc": 5.0
+}
