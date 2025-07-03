@@ -168,19 +168,23 @@ class SubsidenceSimulator:
         # Set default attributes if none provided
         if data_var_attrs is None:
             data_var_attrs = {
-                'units': 'meters',
-                'long_name': 'Ground subsidence',
+                'units': 'L',
+                'long_name': 'Land subsidence',
                 'description': 'Simulated ground subsidence with seasonal variations'
             }
         
         if global_attrs is None:
             global_attrs = {
-                'title': 'Subsidence Simulation Results',
-                'description': 'Simulated ground subsidence over time and space',
+                'title': 'Subsidence Simulation',
+                'description': 'Simulated subsidence over time and space',
                 'center_x': self.x_center,
                 'center_y': self.y_center,
                 'max_amplitude': self.A,
-                'subsidence_rate': self.rate
+                'subsidence_rate': self.rate,
+                'subsidence_size': self.sigma,
+                'fluc_ampitude': self.S,
+                'fluc_spatialsize': self.sigma_fluc,
+                'freq':self.f
             }
         
         # Create coordinate dictionaries
@@ -332,7 +336,7 @@ class SubsidenceSimulator:
         is_playing = [False]
         time_step = [1]
         
-        def autoplay(event):
+        def autoplay(event):    
             nonlocal anim
             
             def animate(frame):

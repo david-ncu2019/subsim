@@ -15,10 +15,10 @@
     ],
     "x_center": 0,
     "y_center": 0,
-    "A": 1,
+    "A": 0.1,
     "rate": 0.1,
-    "sigma": 10,
+    "sigma": 4,
     "S": 0.1,
-    "f": 0.5,
-    "sigma_fluc": 10
+    "f": 1,
+    "sigma_fluc": 4
 }
